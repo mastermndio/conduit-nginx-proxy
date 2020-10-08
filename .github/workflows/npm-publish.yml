@@ -20,8 +20,8 @@ jobs:
         with:
           node-version: 12
       - run: |
-          npm install
-          npm test
+          sudo apt update && sudo apt install nginx
+          sudo nginx -t 
 
   deploy:
     needs: [test]
